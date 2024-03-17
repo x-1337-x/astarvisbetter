@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        min-width: 100vw;
+        min-height: 100vh;
+      }
+
+      canvas {
+        display: block;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        image-rendering: pixelated;
+      }
+
+      #game-canvas {
+        width: 800px;
+        height: 800px;        
+      }
+      #road-canvas {
+        width: 128px;
+        height: 128px;
+      }
+      #grass-canvas {
+        width: 96px;
+        height: 96px;
+      }
+      #mountain-canvas {
+        width: 160px;
+        height: 96px;
+      }
+      #water-canvas {
+        width: 384px;
+        height: 96px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin: auto; display: flex; flex-direction: column;">
+      <canvas id="game-canvas" width="800" height="800"></canvas>
+      <div style="display: flex; gap: 4px; padding: 4px; margin: auto;">
+        <canvas id="road-canvas" width="64" height="64"></canvas>
+        <canvas id="grass-canvas" width="48" height="48"></canvas>
+        <canvas id="mountain-canvas" width="80" height="48"></canvas>
+        <canvas id="water-canvas" width="192" height="48"></canvas>
+      </div>
+    </div>
+    <div style="padding: 24px;">
+      <button id="Start">Start</button><br />
+      <button id="End">End</button><br /><br />
+      <!-- <button id="Road">Road (10)</button><br />
+      <button id="Grass">Grass (50)</button><br />
+      <button id="Swamp">Swamp (150)</button><br />
+      <button id="Mountain">Mountain (1000)</button><br /><br /> -->
+      <button id="Draw">Draw</button><br /><br />
+      <button id="solve">Solve</button><br /><br />
+      <button id="Reset">Reset</button>
+    </div>
+    <script src="./astar.js"></script>
+  </body>
+</html>
